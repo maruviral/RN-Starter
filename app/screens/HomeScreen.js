@@ -31,6 +31,10 @@ function HomeScreen({ navigation }) {
         title="Go to Square Demo"
         onPress={() => navigation.navigate("Square")}
       />
+      <Button
+        title="Go to Text Demo"
+        onPress={() => navigation.navigate("Text")}
+      />
     </View>
   );
 }
