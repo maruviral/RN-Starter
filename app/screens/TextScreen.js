@@ -3,17 +3,19 @@ import { View, Text, StyleSheet } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 
 function TextScreen() {
-  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <View>
       <TextInput
         style={styles.input}
         autoCapitalize="none"
         autoCorrect={false}
-        value={name}
-        onChangeText={(newValue) => setName(newValue)}
+        value={password}
+        onChangeText={(newValue) => setPassword(newValue)}
       />
-      <Text>my name is {name}</Text>
+      {password.length < 5 ? (
+        <Text>Password must be 5 characters long</Text>
+      ) : null}
     </View>
   );
 }
